@@ -1,0 +1,131 @@
+
+  "plt.show()\n",
+    "\n",
+    "print(f\"r = {survey.annual_income_usd.corr(survey.monthly_discretionary_usd):.3f}\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+  
+    "plt.show()\n",
+    "\n",
+    "print(survey.daily_screen_hours.describe().round(2))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+  
+    "    g = survey.groupby(group_col)[[\"trust_traditional_ads_1to5\",\"trust_influencers_1to5\"]].mean()\n",
+    "    g[\"gap\"] = g[\"trust_influencers_1to5\"] - g[\"trust_traditional_ads_1to5\"]\n",
+    "    print(g.round(2))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Strongest signal in the dataset. Ad trust 2.33/5, influencer trust 3.39/5, roughly a full point gap, and it barely moves across region, gender, employment, or income (all land between 1.00 and 1.14). Only outlier is the \"prefer not to say\" gender group (n=45, gap widens to 1.49), but that sample's too small to read much into. Something this consistent across every subgroup usually means it's real, not a fluke in one slice."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<a id='6'></a>\n",
+    "## 6. Correlation check"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "numeric_cols = [\"annual_income_usd\",\"monthly_discretionary_usd\",\"daily_screen_hours\",\n",
+    "                 \"val_sustainability_1to5\",\"val_brand_authenticity_1to5\",\n",
+    "                 \"trust_traditional_ads_1to5\",\"trust_influencers_1to5\"]\n",
+    "\n",
+    "corr = survey[numeric_cols].corr()\n",
+    "fig, ax = plt.subplots(figsize=(8,6))\n",
+    "sns.heatmap(corr, annot=True, fmt=\".2f\", cmap=\"RdPu\", center=0, ax=ax, square=True)\n",
+    "ax.set_title(\"Correlation matrix\")\n",
+    "plt.tight_layout()\n",
+    "plt.savefig(\"../assets/correlation_heatmap.png\", dpi=130, bbox_inches=\"tight\")\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Aside from income vs discretionary spend (0.88), everything else is under +-0.05. Screen time doesn't predict trust in influencers. Sustainability and brand authenticity don't move together. Basically none of the attitude questions correlate with anything.\n",
+    "\n",
+    "Probably means these Likert fields are drawn independently on top of the demographics, which happens a lot in synthetic survey data. Doesn't make the dataset useless, just means I shouldn't invent \"segment X believes Y because of Z\" stories the correlations don't back up. The trust gap in section 5 still holds because it's a difference in averages, not a claimed correlation."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<a id='7'></a>\n",
+    "## 7. Key findings\n",
+    "\n",
+    "1. Ad trust vs influencer trust gap (2.33 vs 3.39/5) - most consistent finding, holds across every subgroup.\n",
+    "2. Discretionary spend is a fixed ~22% of income no matter employment type.\n",
+    "3. BNPL usage (~42%) flat across income quartiles.\n",
+    "4. Social media is the top brand discovery channel (40.8%).\n",
+    "5. Screen time barely differs by platform (5.9-6.2h)."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<a id='8'></a>\n",
+    "## 8. Data quality notes\n",
+    "\n",
+    
+   "metadata": {},
+   "source": [
+    "<a id='9'></a>\n",
+    "## 9. Outside sources\n",
+    "\n",
+    "The low ad trust and income-driven spending findings line up with real research on Gen Z. Numbers below are also logged in `data/industry_benchmarks.csv`:\n",
+    "\n",
+    "- Gen Z global spending power projected to roughly 4x, ~$2.7T (2024) to ~$12.6T (2030). [Bank of America Institute, 2025](https://institute.bankofamerica.com/economic-insights/genz-new-economic-force.html)\n",
+    "- US Gen Z spending dropped ~13% Jan-Apr 2025, mostly apparel/accessories/electronics. [PwC, 2025](https://www.pwc.com/us/en/industries/consumer-markets/library/gen-z-consumer-trends.html)\n",
+    "- Weekly video game spending for 18-24 year olds down ~25% YoY vs under 5% for older generations. [via PC Gamer, 2025](https://www.pcgamer.com/gaming-industry/new-study-shows-that-gen-z-is-spending-way-less-money-on-videogames-than-older-gamers/)\n",
+    "- Average credit card balance ~$3,493 as of mid-2025, lowest of any adult generation. [Experian, 2025](https://www.experian.com/blogs/ask-experian/research/credit-card-debt-by-age/)\n",
+    "- 85% say social media influences what they buy. [Retail Dive, 2025](https://www.retaildive.com/news/generation-z-social-media-influence-shopping-behavior-purchases-tiktok-instagram/652576/)\n",
+    "\n",
+    "Basically: big long-run spending power, low trust in traditional ads, but currently spending more cautiously than the projections suggest. Marketing to this group probably means creator/peer channels over traditional ads.\n",
+    "\n",
+    "Side note: some rows in `data/industry_benchmarks.csv` have conflicting numbers across sources (QSR visit trends especially). Left the disagreement in instead of picking one number."
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}

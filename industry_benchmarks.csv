@@ -1,0 +1,53 @@
+category,metric,value,unit,population,source,year,notes
+social_media,avg_daily_time,4.5,hours,US Gen Z,Cropink/Attest,2025,Range 4.0–5.1 across sources; younger Gen Z ~5.1h
+social_media,pct_using_social_media,95.0,%,US Gen Z,Cropink,2025,~90% globally
+social_media,pct_spending_4plus_hours_daily,50.0,%,US Gen Z,SQ Magazine,2025,Range 35–54% depending on source
+social_media,tiktok_avg_daily_time,2.5,hours,US Gen Z,Simplebeen,2025,Highest single-platform time
+social_media,pct_social_over_search_for_info,46.0,%,US Gen Z,EssayHub,2025,Sprout: 41% turn to social first vs 32% search
+social_media,pct_tiktok_product_discovery,77.0,%,US Gen Z,Cropink,2025,
+social_media,top_platform_instagram_reach,89.0,%,US Gen Z,Simplebeen,2025,IG 89 / YouTube 84 / TikTok 82; rankings vary
+social_media,pct_sleep_disruption_late_scrolling,61.0,%,Gen Z,SQ Magazine,2025,
+social_media,pct_18_24_say_social_harms_mental_health,73.0,%,US 18-24,SQ Magazine,2025,
+gaming,avg_weekly_hours,10.8,hours,US 18-29,Icon Era/Statista,2025,Newzoo global Gen Z ~8.5h; +2.7% YoY
+gaming,daily_time_18_24,137.0,minutes,NA 18-24,Coopboardgames,2025,Combined across platforms
+gaming,pct_play_on_mobile,69.0,%,Gen Z,Quantumrun,2025,Mobile-first cohort
+gaming,pct_play_on_pc,42.0,%,Gen Z,Quantumrun,2025,
+gaming,pct_play_on_console,38.0,%,Gen Z,Quantumrun,2025,
+gaming,avg_monthly_spend,45.0,USD,Gen Z,Gitnux,2025,
+gaming,weekly_spend_change_yoy,-25.0,%,US 18-24,Circana/WSJ,2025,Sharp pullback vs <5% for older gens
+gaming,pct_gaming_as_primary_social_space,58.0,%,Gen Z,SQ Magazine,2025,
+gaming,share_of_global_gamers,25.0,%,Gen Z,Gitnux,2025,
+gaming,pct_female_gamers,48.0,%,Gen Z,Gitnux,2025,
+income_spending,global_spending_power,2.7,USD_trillions,Global Gen Z,Bank of America Institute,2024,Projected $12.6T by 2030
+income_spending,global_spending_power_proj_2030,12.6,USD_trillions,Global Gen Z,BofA Institute/NielsenIQ,2030,NielsenIQ Spend Z: ~$12T
+income_spending,overall_spend_change_jan_apr,-13.0,%,US Gen Z,PwC,2025,"Cuts in apparel, accessories, electronics"
+income_spending,pct_can_save_monthly,35.0,%,US Gen Z,YouGov,2025,
+income_spending,pct_cover_but_cannot_save,22.0,%,US Gen Z,YouGov,2025,
+income_spending,pct_fall_short_of_expenses,23.0,%,US Gen Z,YouGov,2025,
+income_spending,pct_more_careful_with_finances,70.0,%,US Gen Z,YouGov,2025,
+income_spending,pct_not_earning_enough_for_desired_life,52.0,%,US Gen Z,BofA Better Money Habits,2024,
+income_spending,avg_credit_card_debt,3456.0,USD,US Gen Z,Experian,2025,
+income_spending,pct_mobile_payments_native,85.1,%,US Gen Z,Atlanta Fed,2025,Phone for in-store/online
+income_spending,pct_used_bnpl_holidays,54.0,%,US Gen Z,J.D. Power,2025,Outpaced 50% who used credit cards
+income_spending,share_of_us_bnpl_users,30.2,%,US Gen Z,eMarketer,2025,
+income_spending,net_worth_growth_yoy,3.0,%,US Gen Z,Empower,2025,401k savings +14%
+dining,annual_dining_out_spend,2483.0,USD,US Gen Z,BLS-based/Restroworks,2025,"Lower than Millennials $3,455 / Gen X $3,872"
+dining,pct_takeout_is_essential,66.0,%,US Gen Z,National Restaurant Assoc.,2025,~2/3 of Gen Z + Millennials
+dining,pct_delivery_is_essential,60.0,%,US Gen Z,National Restaurant Assoc.,2025,
+dining,qsr_visits_change_q4,34.0,%,US Gen Z,Hospitality Technology/RMS,2025,CONFLICTS: Food&Wine reports QSR spend -19pts over 2yrs
+dining,pct_spending_more_vs_last_year,40.0,%,US Gen Z,RMS,2025,
+dining,pct_planned_to_increase_dining_out,71.0,%,US Gen Z,OpenTable,2025,Highest of any generation
+dining,pct_find_deals_via_social_media,37.0,%,Gen Z + Millennial,YouGov,2025,
+dining,doordash_usage_share,73.0,%,US diners (all gens),TouchBistro/Harris,2025,Favorite delivery app across generations
+shopping_values,pct_influenced_by_social_media,80.0,%,US Gen Z,NRF,2025,
+shopping_values,pct_purchased_via_influencer_rec,56.0,%,Gen Z,Morning Consult,2025,
+shopping_values,pct_prefer_brands_supporting_causes,86.0,%,Gen Z,Center for Generational Kinetics,2025,
+shopping_values,pct_pay_more_for_sustainable,33.0,%,Gen Z,Harris Poll,2025,Willing to pay 5-10% more; GWI disputes premium
+shopping_values,pct_boycotted_brand_over_politics,71.0,%,Gen Z,Mintel,2025,
+shopping_values,pct_like_brand_moral_message,65.0,%,Gen Z,YouGov,2025,63% buy more if brand expresses agreeable view
+shopping_values,pct_used_bnpl_over_50usd,67.0,%,Gen Z,Baymard Institute,2025,Klarna/Afterpay
+shopping_values,pct_smartphone_before_store_visit,74.0,%,Gen Z,Retail Dive,2025,Mobile-first path to purchase
+shopping_values,pct_plan_to_buy_dupes,82.0,%,US Gen Z,PwC Holiday Outlook,2025,63% plan vintage/upcycled
+shopping_values,avg_annual_in_store_spend_household,16500.0,USD,US Gen Z household,Numerator,2025,~580 trips/yr at ~$28/trip
+shopping_values,top_retailer_walmart_share,16.0,%,US Gen Z,Numerator,2025,Amazon 9% / Target 6%
+shopping_values,top_values,,qualitative,Gen Z,YouGov,2025,"Honesty, trustworthiness, consistency"
